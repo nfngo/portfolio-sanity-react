@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700;800;900&display=swap');
+
+:root {
+    --font-base: 'Noto Sans', sans-serif;
+
+    --white-color: #ffffff;
+    --primary-color: #56C7F5;
+    --secondary-color: #F5A956;
+    --black-color: #030303;
+    --gray-color: #AEAEAE;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
