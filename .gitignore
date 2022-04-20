@@ -1,0 +1,6 @@
+
+# Dependency directories
+/backend_sanity/node_modules
+
+# Compiled sanity studio
+/backend_sanity/dist
