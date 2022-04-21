@@ -7,6 +7,7 @@
 a, a:active, a:visited {
     text-decoration: none;
     color: var(--white-color);
+    transition: 0.3s all ease-in-out;
 }
 
 a:hover {

@@ -6,3 +6,5 @@
 # Compiled sanity studio
 /backend_sanity/dist
 
+# production
+/frontend_react/build
