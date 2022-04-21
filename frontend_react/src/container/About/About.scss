@@ -1,0 +1,35 @@
+#about {
+    background-image: url('../../assets/Line_waves_4k.svg');
+
+    @media screen and (max-width: 450px) {
+        background-size: auto;
+    }
+}
+
+.app__about-card {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 4rem;
+
+    -webkit-backdrop-filter: blur(4px);
+            backdrop-filter: blur(4px);
+
+    div {
+        width: 50px;
+        height: 5px;
+        background: linear-gradient(270deg, #56C7F5 0%, #F5A956 100%);
+    }
+
+    h2 {
+        font-weight: 500;
+        font-size: 1.75rem;
+        line-height: 44px;
+        margin: 0.5rem 0 0.75rem;
+    }
+
+    @media screen and (max-width: 450px) {
+        width: 100%;
+    }
+}
