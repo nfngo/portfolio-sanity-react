@@ -8,3 +8,5 @@
 
 # production
 /frontend_react/build
+
+/frontend_react/.env

@@ -29,7 +29,7 @@ const Header = () => {
               Hi, I'm <span>Nuno</span>!
             </h1>
           </div>
-          <div class="app__header-title_subheading">
+          <div className="app__header-title_subheading">
             <p>Web Developer</p>
             <p>Freelancer</p>
           </div>
@@ -49,7 +49,7 @@ const Header = () => {
           className="app__header-circles"
         >
           {[images.css, images.html, images.react].map((item, index) => (
-            <div class="circle" key={`circle-${index}`}>
+            <div className="circle" key={`circle-${index}`}>
               <img src={item} alt="profile_bg" />
             </div>
           ))}
