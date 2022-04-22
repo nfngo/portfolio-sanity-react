@@ -1,0 +1,140 @@
+.app__work-filter {
+    margin-bottom: 3rem;
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        -moz-column-gap: 1rem;
+         column-gap: 1rem;
+
+        li {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 22px;
+            padding-bottom: 5px;
+
+            transition: 0.3s color ease-in-out;
+            cursor: pointer;
+
+            div {
+                width: 100%;
+                height: 4px;
+                margin-top: 0.25rem;
+                background-color: transparent;
+            }
+
+            &:hover {
+                color: var(--gray-color);
+
+                div {
+                    background-color: var(--secondary-color);
+                }
+            }
+
+            &.item-active {
+                color: var(--gray-color);
+
+                div {
+                    background-color: var(--secondary-color);
+                }
+            }
+        }
+    }
+}
+
+.app__work-card {
+    width: 300px;
+    height: 450px;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+
+    transition: all 0.3s ease-in-out;
+    -webkit-filter: grayscale(0.5);
+            filter: grayscale(0.5);
+    -webkit-backdrop-filter: blur(4px);
+            backdrop-filter: blur(4px);
+            
+    &:hover {
+        transform: scale(102%);
+    }
+
+    h4 {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    @media screen and (max-width: 450px) {
+        width: 100%;
+        height: 420px;
+    }
+}
+
+.app__work-card_image {
+    position: relative;
+    height: 300px;
+    width: 100%;
+
+    img {
+        height: 100%;
+        width: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+        border-radius: 10px 10px 0 0
+    }
+
+    @media screen and (max-width: 450px) {
+        height: 270px;
+    }
+}
+
+.app__work-card_tag {
+    position: absolute;
+    bottom: -1px;
+    right: 0px;
+    background-color: var(--black-color);
+    border-radius: 10px 0 0 0;
+    padding: 0.5rem 1rem;
+}
+
+.app__work-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+
+    border-radius: 0.5rem;
+    opacity: 0;
+    transition: all 0.3s ease;
+
+    div {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: rgba(0,0,0,0.5);
+        color: #fff;
+
+        margin: 1rem;
+        font-family: var(--font-base);
+        font-weight: 800;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    svg {
+        width: 50%;
+        height: 50%;
+        color: var(--white-color);
+    }
+}

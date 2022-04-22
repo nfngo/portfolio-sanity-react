@@ -89,6 +89,12 @@ a:hover {
     }
 }
 
+.app__flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .p-text {
     font-weight: 400;
     line-height: 30px;

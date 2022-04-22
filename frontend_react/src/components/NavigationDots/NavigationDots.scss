@@ -1,0 +1,35 @@
+.app__navigation ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    
+    .app__navigation-dot {
+        background-color: var(--gray-color);
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+    
+        margin: 0.75rem;
+    
+        transition: 0.3s all ease-in-out;
+    
+        &:hover {
+            background-color: #56c8f580;
+        }
+
+        &.active {
+            background-color: var(--primary-color);
+        }
+    }
+
+    @media screen and (max-width: 500px) {
+        display: none;
+    }
+}
