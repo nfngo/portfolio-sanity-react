@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import ReactTooltip from "react-tooltip";
 
 import { urlFor, client } from "../../client";
-
 import "./Skills.scss";
 
 const Skills = () => {
@@ -25,16 +24,20 @@ const Skills = () => {
 
   return (
     <div id="skills" className="app__section">
-      <div className="app__container">
+      <motion.div
+        whileInView={{ y: [100, 50, 0], opacity: [0, 0, 1] }}
+        transition={{ duration: 0.5 }}
+        className="app__container"
+      >
         <div className="app__title">
           <h1>Skills & Experience</h1>
         </div>
         <div className="app__skills-container">
           <div className="app__skills-exp">
-            {experience?.map((experience) => (
+            {experience?.map((experience, index) => (
               <motion.div
                 className="app__skills-exp-item"
-                key={experience.year}
+                key={`${experience.year}-${index}`}
               >
                 <div className="app__skills-exp-year">
                   <p>{experience.year}</p>
@@ -72,7 +75,7 @@ const Skills = () => {
             {skills?.map((skill) => (
               <motion.div
                 whileInView={{ opacity: [0, 1] }}
-                transition={{ durantion: 0.5 }}
+                transition={{ duration: 0.5 }}
                 className="app__skills-item"
                 key={skill.name}
               >
@@ -84,7 +87,7 @@ const Skills = () => {
             ))}
           </motion.div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

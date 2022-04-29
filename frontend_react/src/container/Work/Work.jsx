@@ -39,7 +39,11 @@ const Work = () => {
   return (
     <>
       <div id="work" className="app__section">
-        <div className="app__container">
+        <motion.div
+          whileInView={{ y: [100, 50, 0], opacity: [0, 0, 1] }}
+          transition={{ duration: 0.5 }}
+          className="app__container"
+        >
           <div className="app__title">
             <h1>My Creative Portfolio Section</h1>
           </div>
@@ -106,7 +110,7 @@ const Work = () => {
               </div>
             ))}
           </motion.div>
-        </div>
+        </motion.div>
       </div>
     </>
   );

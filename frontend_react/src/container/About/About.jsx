@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
-import "./About.scss";
-
 import { client } from "../../client";
+import "./About.scss";
 
 const About = () => {
   const [abouts, setAbouts] = useState([]);
@@ -17,7 +16,11 @@ const About = () => {
   return (
     <>
       <div id="about" className="app__section">
-        <div className="app__container">
+        <motion.div
+          whileInView={{ y: [100, 50, 0], opacity: [0, 0, 1] }}
+          transition={{ duration: 0.5 }}
+          className="app__container"
+        >
           <div className="app__title">
             <p>Who am I</p>
             <h1>"It always seems impossible until it’s done"</h1>
@@ -37,7 +40,7 @@ const About = () => {
               </motion.div>
             ))}
           </div>
-        </div>
+        </motion.div>
       </div>
     </>
   );
