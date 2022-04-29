@@ -3,7 +3,7 @@ import Scrollspy from "react-scrollspy";
 
 import "./NavigationDots.scss";
 
-const sections = ["home", "about", "skills", "work", "contact"];
+const sections = ["home", "about", "work", "skills", "contact"];
 
 const NavigationDots = () => {
   return (

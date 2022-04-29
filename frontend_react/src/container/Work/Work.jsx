@@ -68,7 +68,7 @@ const Work = () => {
               <div className="app__work-card" key={index}>
                 <div className="app__work-card_image">
                   <img src={urlFor(work.imgUrl)} alt={work.name} />
-                  <div class="app__work-card_tag">{work.tags[0]}</div>
+                  <div className="app__work-card_tag">{work.tags[0]}</div>
 
                   <motion.div
                     whileHover={{ opacity: [0, 1] }}
