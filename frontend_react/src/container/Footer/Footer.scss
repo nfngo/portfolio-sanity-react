@@ -116,9 +116,7 @@
         transition: 0.3s all ease-in-out;
 
         &:hover {
-            color: var(--primary-color);
-            box-shadow: inset 0px 0px 0px 1px var(--primary-color);
-            background-color: transparent;
+            background-color: #56c8f580;
         }
     }
 }
