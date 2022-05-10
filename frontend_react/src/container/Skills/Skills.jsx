@@ -10,7 +10,8 @@ const Skills = () => {
   const [skills, setSkills] = useState([]);
 
   useEffect(() => {
-    const query = '*[_type == "experiences"] | order(year desc)';
+    const query =
+      '*[_type == "experiences"] {..., works[]->} | order(year desc)';
     const skillsQuery = '*[_type == "skills"]';
 
     client.fetch(query).then((data) => {
@@ -43,7 +44,7 @@ const Skills = () => {
                   <p>{experience.year}</p>
                 </div>
                 <motion.div className="app__skills-exp-works">
-                  {experience.works.map((work, index) => (
+                  {experience.works?.map((work, index) => (
                     <>
                       <motion.div
                         whileInView={{ opacity: [0, 1] }}
