@@ -47,57 +47,67 @@ const Footer = () => {
           className="app__container"
         >
           <div className="app__title">
-            <h1>Take a Coffe & Chat With Me</h1>
-          </div>
-          <div className="app__contact-info">
-            <div className="app__contact-info_contact">
-              <img src={images.email} alt="email" />
-              <a href="mailto:nfnoliveira@gmail.com" className="p-text">
-                nfnoliveira@gmail.com
-              </a>
-            </div>
-            <div className="app__contact-info_contact">
-              <img src={images.mobile} alt="mobile" />
-              <a href="tel: +351 925056452" className="p-text">
-                +351 925056452
-              </a>
-            </div>
+            <h1>Take a Coffee & Chat With Me</h1>
           </div>
 
-          {!isFormSubmitted ? (
-            <div className="app__contact-form">
-              <input
-                type="text"
-                placeholder="Your Name"
-                name="name"
-                value={name}
-                onChange={handleChangeInput}
-              />
-
-              <input
-                type="email"
-                placeholder="Your Email"
-                name="email"
-                value={email}
-                onChange={handleChangeInput}
-              />
-
-              <textarea
-                placeholder="Your Message"
-                value={message}
-                name="message"
-                onChange={handleChangeInput}
-              />
-
-              <button type="button" onClick={handleSubmit}>
-                {loading ? "Sending" : "Send Message"}
-              </button>
+          <div className="app__contact-info_container">
+            <div className="app__contact-info">
+              <div className="app__contact-info_contact">
+                <img src={images.email} alt="email" />
+                <a href="mailto:nfnoliveira@gmail.com" className="p-text">
+                  nfnoliveira@gmail.com
+                </a>
+              </div>
+              <div className="app__contact-info_contact">
+                <img src={images.mobile} alt="mobile" />
+                <a href="tel: +351 925056452" className="p-text">
+                  +351 925056452
+                </a>
+              </div>
             </div>
-          ) : (
-            <div className="app__contact-form_message">
-              <h3 className="head-text">Thank you for getting in touch</h3>
-            </div>
-          )}
+
+            {!isFormSubmitted ? (
+              <div className="app__contact-form">
+                <input
+                  type="text"
+                  placeholder="Your Name"
+                  name="name"
+                  value={name}
+                  onChange={handleChangeInput}
+                />
+
+                <input
+                  type="email"
+                  placeholder="Your Email"
+                  name="email"
+                  value={email}
+                  onChange={handleChangeInput}
+                />
+
+                <textarea
+                  placeholder="Your Message"
+                  value={message}
+                  name="message"
+                  onChange={handleChangeInput}
+                />
+
+                <button type="button" onClick={handleSubmit}>
+                  {loading ? "Sending" : "Send Message"}
+                </button>
+              </div>
+            ) : (
+              <div className="app__contact-form_message">
+                <h3 className="head-text">Thank you for getting in touch</h3>
+              </div>
+            )}
+            <motion.div 
+              className="app__contact-coffee"
+              whileInView={{ y: [-350, -250, -150], opacity: [0, 0, 1] }}
+              transition={{ duration: 0.5 }}
+              >
+              <img src={images.coffee} alt="coffee lover"/>
+            </motion.div>
+          </div>
         </motion.div>
         <div className="copyright">
           <p>@2022 NUNO</p>

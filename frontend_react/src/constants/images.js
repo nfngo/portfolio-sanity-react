@@ -9,6 +9,7 @@ import logo from "../assets/logo.png";
 import mobile from "../assets/mobile.png";
 import profile from "../assets/profile.png";
 import react from "../assets/react.png";
+import coffee from "../assets/coffee_lover_isometric.svg";
 
 export default {
   bg,
@@ -22,4 +23,5 @@ export default {
   mobile,
   profile,
   react,
+  coffee,
 };
