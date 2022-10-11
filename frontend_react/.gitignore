@@ -21,3 +21,7 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+/src/assets/MelhorBanco_Preview.png
+/src/assets/profile.png
+/src/assets/GPT-3_Preview.png
