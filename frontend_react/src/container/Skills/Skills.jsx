@@ -51,14 +51,14 @@ const Skills = () => {
                         transition={{ duration: 0.5 }}
                         className="app__skills-exp-work"
                         data-tip
-                        data-for={work.name}
+                        data-for={work.company}
                         key={`${work.name}-${index}`}
                       >
                         <h4>{work.name}</h4>
                         <p className="p-text">{work.company}</p>
                       </motion.div>
                       <ReactTooltip
-                        id={work.name}
+                        id={work.company}
                         effect="solid"
                         arrowColor="#56C7F5"
                         className="skills-tooltip"
